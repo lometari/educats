@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    padding: 0;
+    background-image: url("1.jpg");
+    background-size: 25%;
+    background-color: #7c7a79;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+ul {
+    margin: 0;
+    padding: 0;
+}
+.Mlist {
+    width: 90%;
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    list-style: none;
+}
+.Mlist  li {
+    width: 150px;
+    height: 100%;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    border: 1px outset #542302;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.dlist {
+    display: block;
+    position: absolute;
+    background-clip: border-box;;
+    top: 100%;
+    left: 0;
+    list-style: none;
+}
+.dlist li {
+    display: none;
+    width: 150px;
+    margin: 9px 0;
+    padding: 10px 0;
+}
+.dlist li:hover {
+    background-color: #bbbaba;
+    transition: .4s ease-out;
+}
+.Mlist li:hover {
+    filter: invert(100%);
+    transition: .4s ease-out;
+}
+
+.Mlist li:hover .dlist li {
+    display: block;
+}
+a {
+    text-decoration: none;
+    /*height: 100%;*/
+    width: 100%;
+    /*align-items: center;*/
+    /*overflow:hidden;*/
+    display: block;
+    color: #2c2b2b;
+    box-sizing: border-box;
+    padding: 10% 0;
+}
+nav {
+    background-color: #2c2b2b;
+    height: 9vh;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 9px;
+    /*margin: 0px;*/
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+   }
+img {
+    border-radius: 10px;
+    width: 80%;
+    margin: 10px;
+}
+main {
+    min-height: 71vh;
+    padding: 0 10%;
+    margin-top: 60px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+section {
+    background-color: aquamarine;
+    border-radius: 10px;
+    background-image: url("2.jpg");
+    background-size: 51%;
+    width:  50%;
+    display: flex;
+    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    text-align: center;
+}
+section h1 {
+    padding: 0 15px ;
+}
+p {
+    margin: 10px;
+}
+footer {
+    width: 100%;
+    background-color: #2c2b2b;
+    height: 2vh;
+    color: white;
+    padding: 6px 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}

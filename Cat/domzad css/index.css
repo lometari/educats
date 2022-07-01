@@ -1,0 +1,95 @@
+body {
+    background-color: #afafaf;
+    margin: 0%;
+    padding: 0%;
+}
+.box0 {
+    display: block;
+    position: relative;
+    height: 100vh;
+}
+.bblock {
+    position: fixed;
+    top: 30%;
+    display: block;
+    border: 0px;   
+    text-align: center;
+}
+.button {
+    position: relative;
+    text-decoration: none;
+    background-color: #6e6e6e;
+    color: #ECEDF0;
+    border-color: #ffffff;
+    border: 1px solid;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+    width: 8rem;
+}
+li {
+    list-style-type: none;
+    margin: 15px;
+}
+audio{
+    position: relative;
+    top: 45%;
+    margin-left: 40%;
+}
+video{
+    position: relative;
+    top: 20%;
+    margin-left: 30%;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+a:visited{
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+h1 {
+    margin-top: 0;
+    position: relative; 
+    top: 20%; 
+    text-align: center; 
+    color: #ffffff;
+}
+p {
+    position: relative; 
+    margin: 20% 30%; 
+    color: #ffffff;
+}
+#face {
+    background-color: #afafaf;
+}
+div#audio {
+    background-color: #06c947;
+}
+#video {
+    background-color: #1e87e9;
+}
+#other {
+    background-color: #6d6d6d;
+}
+div#face img {
+    position: absolute; 
+    bottom: 10%; 
+    right: 10%; 
+    width: 10%;
+}
+#else {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#else img {
+    display: block;
+    width: 35%;
+}
