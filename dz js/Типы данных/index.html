@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS forCats</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Коды котят на JS или что-то вроде того...</h1>
+</header>
+<main>
+    <section>
+        <div class="bigBox">
+            <h2>Примитивные типы данных</h2>
+            <div>
+                <p class="name">Null</p>
+                <p>Тип данных определен, но содержит "НИЧЕГО", "ПУСТО" или "ЗНАЧЕНИЕ НЕ ОПРЕДЕЛЕНО"</p>
+            </div>
+            <div>
+                <p class="name">Undefined</p>
+                <p>Тип данных не определен</p>
+            </div>
+            <div>
+                <p class="name">Number</p>
+                <p>Значением может быть:
+                    <ul>
+                        <li>Целое число: <span class="sample">123</span></li>
+                        <li>Число с плавающей точкой: <span class="sample">1.23</span></li>
+                        <li>Результать деления на 0: <span class="sample">Infinity</span></li>
+                        <li>Результат деления на 0 отрицательного числа: <span class="sample">- Infinity</span></li>
+                        <li>Математическая неудачаА: <span class="sample">NaN</span>. ("Not a Number", другими словами: результат вычислений не может быть представлен как число)</li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <p class="name">BigInt</p>
+                <p>Ну ооооощень балшой число! </p>
+                <p><span class="sample">123123123123n</span></p>
+                <p>Больше чем 2<sup>53</sup>-1, или меньше чем -2<sup>53</sup>-1</p>
+            </div>
+            <div>
+                <p class="name">String</p>
+                <p>Данные в текстовом представлении. Встречаются в разных кавычках.</p>
+                    <ol>
+                        <li>" " и '' - равноценны</li>
+                        <li>`` - обратные кавычка(бывают и такие, ага) позволяют обращаться к переменной внутри данной строки
+                        </li>
+                    </ol>
+                <p>Смотри-ка примерчик подвезли! <br>
+                    <span class="sample">`User <span class="red">${user.name}</span> is <span class="red">${user.age}</span>  years old`</span>
+                </p>
+            </div>
+            <div>
+                <p class="name">Boolean</p>
+                <p>Логический тип. Может только в правду или ложь. <br>
+                    Но, что характерно, вернется как тип для такой вот, к примеру, вычисляемой переменной:<br>
+                    let someVar = 13 > 1;</p>
+            </div>
+            <div>
+                <p class="name">Symbol</p>
+                <p>Через функцию Symbol() создает уникальное и неизменяемое значение. Сразу видно штука нужная, потом пойму.</p>
+            </div>
+        </div>
+        <div class="bigBox">
+            <h2><span class="red">Не</span> примитивные типы данных</h2>
+            <div>
+                <p class="name">Object</p>
+                <p>Object - не примитив, потому что может содержать в себе больше одного значения одновременно. И даже больше одного объекта, и скорее всего силу Земли...</p>
+                <p>Говорят, что функции и метододы в JS тоже немного Object...</p>
+                <p class="name">Создание объекта</p>
+                <p>С помощью конструктора:<br>
+                    <span class="sample">let user = new Object();</span><br>
+                    Применяется, когда нужно создать много однотипных объектов.</p>
+                <p>С помощью литеральной нотации:<br>
+                    <span class="sample">let user = {};</span><br>
+                    Можно сразу задать свойства объекта. Свойства это <span class="sample">ключ(имя) : значение ,<br>
+                    </span></p>
+                <p class="name">Запись свойств объекта</p>
+                <p>Разные способы задания свойств объекта:<br>
+                    <br><span class="sample">
+                    let oneMoreKey = "color";<br>
+                    let user = {<br>
+                    name: "CatInHat",<br>
+                    age: 13,<br>
+                    "food type": "meat",<br>
+                    [oneMoreKey]: "black",<br>
+                    };</span>
+                    </p>
+                <p>Добавление и удаление свойств:<br>
+                    <span class="sample">user.favoriteSpot = {<br>
+                    day: "kitchen",<br>
+                    night: "bed",<br>
+                        };<br>
+                    <br>
+                    delete user[ ' name ' ];</span><br>
+
+                </p>
+                <p class="name">Разрешите обратиться! или обращение к свойствам объекта</p>
+                <p>Можно обращаться через точку <span class="sample">.</span> или с помощью квадратных скобок <span class="sample">[ ]</span>. Например:<br>
+                    <br>
+                    <span class="sample">console.log(user.name);</span><br>
+                    <br>
+                    <span class="sample">console.log(user["name"]);</span><br>
+                    <p>К свойствам с пробелом в имени типа <span class="sample">"food type"</span> можно обращаться ТОЛЬКО через квадратные скобки, но есть мнение, что такой способ имеет преимущества, например, возможноть реализовать подобное обращение через переменную:<br>
+                    <br>
+                    <span class="sample">let key = "name";<br>
+                    console.log(user[key]);</span><br>
+                </p>
+                <p class="name">А напоследок я скажу...</p>
+                <p>
+                    Еще мы узнали, что запись типа <span class="sample">user = userBot</span> не копирует объект, а создает ссылку на него(мне нравится аналогия с дубликатом ключей к камере хранения).</p>
+                <p>Для создания клона используется метод <span class="sample">Object.assign()</span>.</p>
+
+            </div>
+        </div>
+    </section>
+    <div class=bigBox>
+        <h2>Функции и Методы</h2>
+        <p class="name">Функция?</p>
+        <p>Функция - объект, позволяющий реализовывать определенную логику.... бла-бла-бла... умные слова...
+        Функция что-то делает с объектом или создавать объект(ы), может возвращать что-то в результате выполнения или не возвращать. Такая она...</p>
+        <p class="name">Метод!</p>
+        <p>Мне нагляднее всего показалось такое описание: "обычное свойство объекта хранит значение, а метод хранит функцию" т.е. метод - это функция заранее прописанная(уже в стандарте JS?) под конкретный тип объекта.</p>
+    </div>
+</main>
+<footer>
+    Cats Code Matter
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
