@@ -1,14 +1,24 @@
 console.log('Let the party begins...');
-
 let userForm = document.getElementById('userInfoID');
 
-// console.log(userForm);
+userForm.addEventListener('submit', sendRequest);
 
-function takeData(event){
-    event.preventDefault();
-    userForm.submit();
+function sendRequest() {
+    let formData = new FormData(userForm);
+    let request  = new XMLHttpRequest();
+    request.open('POST', '/mailer.php');
+    request.send(formData);
 }
 
-userForm.addEventListener('submit', takeData);
 
 
+//Почему-то не собранное в кучку не работало О_о
+
+// let formData = new FormData(userForm);
+//
+// let request  = new XMLHttpRequest();
+// request.open('POST', '/mailer.php');
+//
+// function sendRequest() {
+//     request.send(formData);
+// }
